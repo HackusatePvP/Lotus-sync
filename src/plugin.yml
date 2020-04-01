@@ -1,0 +1,4 @@
+main: cc.anthrax.proxy.lotus.Sync
+name: Lotus-Sync
+version: "1.0.0"
+author: "Hackusate_PvP"

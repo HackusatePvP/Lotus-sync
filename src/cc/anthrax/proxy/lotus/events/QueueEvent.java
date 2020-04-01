@@ -21,28 +21,11 @@ public class QueueEvent implements Listener {
                     String input = in.readUTF(); // the inputstring
                     BungeeCord.getInstance().getPluginManager().dispatchCommand(BungeeCord.getInstance().getConsole(), input);
                 }
-                if (channel.equals("count")) {
-                    ServerInfo server = BungeeCord.getInstance().getPlayer(e.getReceiver().toString()).getServer().getInfo();
-                    int count = in.readInt();
-                }
-                sendToBukkit();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
 
         }
-    }
-
-    public void sendToBukkit() {
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        DataOutputStream out = new DataOutputStream(stream);
-        try {
-            out.writeUTF("PlayerCount");
-            out.writeUTF("pvp");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 }
 
